@@ -14,13 +14,13 @@ public class Bank {
 
    private String name;
    private Map<Integer,Customer> customers;
-   private DataSourceFile dataSource;
+   private DataSource dataSource;
 
    /**
     * Constructs a bank with no customers.
     */
    @Autowired
-   public Bank(@Value("${bankname}") String name, DataSourceFile dataSource) {
+   public Bank(@Value("${bankname}") String name, DataSource dataSource) {
       this.name = name;
       this.dataSource = dataSource;
       this.customers = dataSource.readCustomers();

@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 @Component
-public class DataSourceFile {
+public class DataSourceFile implements DataSource{
 
     private String filename;
 
